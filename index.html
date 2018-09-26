@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+
+    #road {
+        width: 100vw;
+        /* position: fixed; */
+    }
+
+    #cardiv {
+        position: absolute;
+        width: 330px;
+        top: 420px;
+        animation: runing 3s;
+        animation-fill-mode: forwards;
+    }
+
+    #lambo {
+        width: 350px;
+    }
+
+
+
+    @keyframes runing {
+        from {
+            left: 0vw;
+        }
+
+        to {
+            left: 70vw;
+        }
+    }
+
+
+    #right {
+        margin-left: 137px;
+    }
+
+    #left {
+        margin-left: 35px;
+    }
+
+    #left,
+    #right {
+        width: 60px;
+        top: -73px;
+        position: relative;
+        animation: rotating linear;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes rotating {
+        from {
+
+            transform: rotate(0deg);
+        }
+
+        to {
+
+            transform: rotate(360deg);
+        }
+    }
+
+    /* #left{
+        position: absolute;
+        left:16px ;
+    }
+    #right{
+        position: absolute;
+        left: 165px;
+    } */
+
+    #cardiv:hover{
+        animation: backward 3s;
+    }
+    
+    @keyframes backward {
+        from {
+            right: 0vw;
+        }
+
+        to {
+            right: 70vw;
+        }
+    }
+</style>
+
+<body>
+    <div id="main">
+        <img id="road" src="road.jpg" alt="Road">
+        <div id="cardiv">
+            <img id="lambo" src="car-no-tyer.png" alt="car">
+
+            <img id="left" src="left.png" alt="left">
+            <img id="right" src="right.png" alt="right">
+
+        </div>
+    </div>
+</body>
+
+</html>
